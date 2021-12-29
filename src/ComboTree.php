@@ -5,6 +5,7 @@ namespace MrMuminov\ComboTree;
 use yii\base\Model;
 use yii\base\Widget;
 use yii\helpers\Html;
+use yii\helpers\BaseInflector;
 use yii\base\InvalidConfigException;
 
 /**
@@ -124,7 +125,7 @@ class ComboTree extends Widget
     {
         $view = $this->getView();
         ComboTreeAsset::register($view);
-        $id = $this->options['id'];
+        $id = BaseInflector::id2camel($this->options['id']);
         $pluginOptions = $this->pluginOptions;
         $pluginOptions['source'] = $this->source;
         $pluginOptions['isMultiple'] = $this->multiple;
