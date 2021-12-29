@@ -1,6 +1,6 @@
 <?php
 
-namespace yii\widgets;
+namespace MrMuminov\ComboTree;
 
 use yii\web\AssetBundle;
 

@@ -5,11 +5,43 @@ namespace MrMuminov\ComboTree;
 use yii\base\Model;
 use yii\base\Widget;
 use yii\helpers\Html;
-use yii\widgets\ComboTreeAsset;
 use yii\base\InvalidConfigException;
 
 /**
  * Class ComboTree - widget for rendering combo tree select
+ *
+ * @author Bahriddin Mo'minov
+ * @package MrMuminov\ComboTree
+ *
+ * <?= \MrMuminov\ComboTree\ComboTree::widget([
+ *     'source' => [
+ *         [
+ *             'id' => 0,
+ *             'title' => 'choice 1  '
+ *         ], [
+ *             'id' => 1,
+ *             'title' => 'choice 2',
+ *             'subs' => [
+ *                 [
+ *                     'id' => 10,
+ *                     'title' => 'choice 2 1'
+ *                 ],
+ *                 [
+ *                     'id' => 11,
+ *                     'title' => 'choice 2 2'
+ *                 ],
+ *                 [
+ *                     'id' => 12,
+ *                     'title' => 'choice 2 3'
+ *                 ]
+ *             ]
+ *         ],
+ *         [
+ *             'id' => 2,
+ *             'title' => 'choice 3'
+ *         ]
+ *     ]
+ * ]); ?>
  */
 class ComboTree extends Widget
 {
