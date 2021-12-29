@@ -31,27 +31,32 @@ Once the extension is installed, simply use it in your code by  :
 <?= \MrMuminov\ComboTree\ComboTree::widget([
     'source' => [
         [
-            'id' => 0,
-            'title' => 'choice 1  '
-        ], [
             'id' => 1,
-            'title' => 'choice 2',
-            'subs' => [
-                [
-                    'id' => 10,
-                    'title' => 'choice 2 1'
-                ], [
-                    'id' => 11,
-                    'title' => 'choice 2 2'
-                ], [
-                    'id' => 12,
-                    'title' => 'choice 2 3'
-                ]
-            ]
-        ], [
+            'title' => 'choice 1',
+        ], 
+        [
             'id' => 2,
-            'title' => 'choice 3'
-        ]
+            'title' => 'choice 2',
+        ],
+        [
+            'id' => 3,
+            'title' => 'choice 2 1',
+            'parent_id' => 2,
+        ], 
+        [
+            'id' => 4,
+            'title' => 'choice 2 2',
+            'parent_id' => 2,
+        ], 
+        [
+            'id' => 5,
+            'title' => 'choice 2 3',
+            'parent_id' => 2,
+        ], 
+        [
+            'id' => 6,
+            'title' => 'choice 3',
+        ], 
     ]
 ]); ?>
 ```
