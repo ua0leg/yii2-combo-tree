@@ -130,7 +130,7 @@ class ComboTree extends Widget
         $pluginOptions['source'] = $this->source;
         $pluginOptions['isMultiple'] = $this->multiple;
         $view->registerJsVar(self::PLUGIN_NAME . '_' . $id . '_config', $pluginOptions);
-        $view->registerJs('$("#' . $id . '").' . self::PLUGIN_NAME . '(' . self::PLUGIN_NAME . '_' . $id . '_config);');
+        $view->registerJs('$("#' . $this->options['id'] . '").' . self::PLUGIN_NAME . '(' . self::PLUGIN_NAME . '_' . $id . '_config);');
     }
 
     private function renderInputHtml()

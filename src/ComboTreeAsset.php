@@ -15,13 +15,20 @@ class ComboTreeAsset extends AssetBundle
     /**
      * @var string $sourcePath the source path to the asset files
      */
-    public $sourcePath = '@vendor/mrmuminov/yii2-combo-tree/assets/js';
+    public $sourcePath = '@vendor/mrmuminov/yii2-combo-tree/assets';
 
     /**
      * @var string[] $js the js files that this bundle contains.
      */
     public $js = [
-        'comboTreePlugin.min.js',
+        'js/comboTreePlugin.js',
+    ];
+
+    /**
+     * @var string[] $css the js files that this bundle contains.
+     */
+    public $css = [
+        'css/comboTree.css',
     ];
 
     /**
