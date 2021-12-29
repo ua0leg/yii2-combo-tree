@@ -1,0 +1,22 @@
+{
+    "name": "mrmuminov/yii2-combo-tree",
+    "description": "Yii2 Combo Tree Select Extension",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","select","tree","dropdown","combo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bahriddin Mo'minov",
+            "email": "darkshadeuz@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MrMuminov\\ComboTree\\": "src"
+        }
+    }
+}

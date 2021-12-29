@@ -1,0 +1,107 @@
+<?php
+
+namespace MrMuminov\ComboTree;
+
+use yii\base\Model;
+use yii\base\Widget;
+use yii\helpers\Html;
+use yii\widgets\ComboTreeAsset;
+use yii\base\InvalidConfigException;
+
+/**
+ * Class ComboTree - widget for rendering combo tree select
+ */
+class ComboTree extends Widget
+{
+    const PLUGIN_NAME = 'comboTree';
+    /**
+     * @var \yii\widgets\ActiveField active input field, which triggers this widget rendering.
+     * This field will be automatically filled up in case widget instance is created via [[\yii\widgets\ActiveField::widget()]].
+     * @since 2.0.0
+     */
+    public $field;
+    /**
+     * @var string the name of the jQuery plugin
+     */
+    public $source;
+    /**
+     * @var Model the data model that this widget is associated with.
+     */
+    public $model;
+    /**
+     * @var string the model attribute that this widget is associated with.
+     */
+    public $attribute;
+    /**
+     * @var string the input name. This must be set if [[model]] and [[attribute]] are not set.
+     */
+    public $name;
+    /**
+     * @var string the input value.
+     */
+    public $value;
+    /**
+     * @var array the HTML attributes for the input tag.
+     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
+     */
+    public $options = [];
+
+    /**
+     * @var bool $multiple to allow multiple selection.
+     */
+    public $multiple = false;
+
+    /**
+     * @var array $pluginOptions the options for the underlying jQuery plugin.
+     */
+    public $pluginOptions = [];
+
+    /**
+     * @return void
+     * @throws InvalidConfigException
+     */
+    public function init()
+    {
+        if ($this->name === null && !$this->hasModel()) {
+            throw new InvalidConfigException("Either 'name', or 'model' and 'attribute' properties must be specified.");
+        }
+        if (!isset($this->options['id'])) {
+            $this->options['id'] = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->getId();
+        }
+        parent::init();
+    }
+
+    /**
+     * @return bool whether this widget is associated with a data model.
+     */
+    protected function hasModel()
+    {
+        return $this->model instanceof Model && $this->attribute !== null;
+    }
+
+    /**
+     * @return string|void the result of the widget execution to be outputted.
+     */
+    public function run()
+    {
+        $this->registerClientScript();
+        echo $this->renderInputHtml();
+    }
+
+    private function registerClientScript()
+    {
+        $view = $this->getView();
+        ComboTreeAsset::register($view);
+        $id = $this->options['id'];
+        $pluginOptions = $this->pluginOptions;
+        $pluginOptions['source'] = $this->source;
+        $pluginOptions['isMultiple'] = $this->multiple;
+        $view->registerJsVar(self::PLUGIN_NAME . '_' . $id . '_config', $pluginOptions);
+        $view->registerJs('$("#' . $id . '").' . self::PLUGIN_NAME . '(' . self::PLUGIN_NAME . '_' . $id . '_config);');
+    }
+
+    private function renderInputHtml()
+    {
+        return Html::activeInput('text', $this->model, $this->attribute, $this->options);
+    }
+}
