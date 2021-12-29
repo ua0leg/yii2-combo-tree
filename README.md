@@ -55,3 +55,5 @@ Once the extension is installed, simply use it in your code by  :
     ]
 ]); ?>
 ```
+![multiple](_static/img-multiple.png)
+![single.png](_static/img-single.png)
