@@ -9,7 +9,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 Either run
 
-```
+```bash
 php composer.phar require --prefer-dist mrmuminov/yii2-combo-tree "*"
 ```
 
@@ -53,4 +53,5 @@ Once the extension is installed, simply use it in your code by  :
             'title' => 'choice 3'
         ]
     ]
-]); ?>```
+]); ?>
+```
