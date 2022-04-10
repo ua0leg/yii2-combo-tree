@@ -57,7 +57,10 @@ Once the extension is installed, simply use it in your code by  :
             'id' => 6,
             'title' => 'choice 3',
         ], 
-    ]
+    ],
+    'pluginOptions' => [
+        'cascadeSelect' => false,
+    ],
 ]); ?>
 ```
 ![multiple](_static/img-multiple.png)
