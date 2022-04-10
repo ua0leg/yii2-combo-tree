@@ -143,7 +143,7 @@ class ComboTree extends Widget
     private function generateTree(&$source, $parentId = null){
         $tree = [];
         foreach ($source as $item) {
-            $item['parent_id'] = $item['parent_id'] ?? $parentId;
+            $item['parent_id'] = $item['parent_id'] ?? null;
             if ($item['parent_id'] == $parentId) {
                 $item['subs'] = $this->generateTree($source, $item['id']);
                 $tree[] = $item;
