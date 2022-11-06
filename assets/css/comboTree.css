@@ -143,3 +143,6 @@ span.comboTreeItemTitle{
     top: 4px;
     color: gray;
 }
+.mdi-chevron-down {
+    background: url('https://api.iconify.design/mdi/chevron-down.svg') no-repeat center center / contain;
+}

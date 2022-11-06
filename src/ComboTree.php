@@ -85,6 +85,11 @@ class ComboTree extends Widget
     public $multiple = false;
 
     /**
+     * @var array $selected the selected IDs.
+     */
+    public $selected = [];
+
+    /**
      * @var array $pluginOptions the options for the underlying jQuery plugin.
      */
     public $pluginOptions = [];
@@ -130,6 +135,7 @@ class ComboTree extends Widget
         //$this->source = $this->generateTree($this->source);
         $pluginOptions['source'] = $this->source;
         $pluginOptions['isMultiple'] = $this->multiple;
+        $pluginOptions['selected'] = $this->selected;
         $view->registerJsVar(self::PLUGIN_NAME . '_' . $id . '_config', $pluginOptions);
         $view->registerJs('$("#' . $this->options['id'] . '").' . self::PLUGIN_NAME . '(' . self::PLUGIN_NAME . '_' . $id . '_config);');
     }
