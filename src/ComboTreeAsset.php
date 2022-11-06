@@ -1,6 +1,6 @@
 <?php
 
-namespace MrMuminov\ComboTree;
+namespace ua0leg\Yii2ComboTree;
 
 use yii\web\AssetBundle;
 
@@ -15,7 +15,7 @@ class ComboTreeAsset extends AssetBundle
     /**
      * @var string $sourcePath the source path to the asset files
      */
-    public $sourcePath = '@vendor/mrmuminov/yii2-combo-tree/assets';
+    public $sourcePath = '@vendor/ua0leg/yii2-combo-tree/assets';
 
     /**
      * @var string[] $js the js files that this bundle contains.

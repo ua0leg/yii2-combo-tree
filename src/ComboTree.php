@@ -1,6 +1,6 @@
 <?php
 
-namespace MrMuminov\ComboTree;
+namespace Ua0leg\Yii2ComboTree;
 
 use yii\base\Model;
 use yii\base\Widget;
@@ -15,7 +15,7 @@ use yii\base\InvalidConfigException;
  * @author Bahriddin Mo'minov
  * @package MrMuminov\ComboTree
  *
- * <?= \MrMuminov\ComboTree\ComboTree::widget([
+ * <?= \Ua0leg\Yii2ComboTree\ComboTree::widget([
  *     'source' => [
  *         [
  *             'id' => 0,
