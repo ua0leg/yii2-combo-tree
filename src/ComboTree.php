@@ -5,7 +5,6 @@ namespace Ua0leg\Yii2ComboTree;
 use yii\base\Model;
 use yii\base\Widget;
 use yii\helpers\Html;
-use yii\helpers\ArrayHelper;
 use yii\helpers\BaseInflector;
 use yii\base\InvalidConfigException;
 
@@ -128,7 +127,7 @@ class ComboTree extends Widget
         ComboTreeAsset::register($view);
         $id = BaseInflector::id2camel($this->options['id']);
         $pluginOptions = $this->pluginOptions;
-        $this->source = $this->generateTree($this->source);
+        //$this->source = $this->generateTree($this->source);
         $pluginOptions['source'] = $this->source;
         $pluginOptions['isMultiple'] = $this->multiple;
         $view->registerJsVar(self::PLUGIN_NAME . '_' . $id . '_config', $pluginOptions);
