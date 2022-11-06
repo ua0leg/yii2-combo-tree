@@ -94,3 +94,52 @@ span.comboTreeItemTitle{
     border-right: none;
     border-bottom: 1px solid #999;
 }
+
+.mdi-chevron-down-circle-outline {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+}
+.mdi-chevron-down-circle-outline::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    left: 2px;
+    top: 2px;
+    color: gray;
+}
+.mdi-chevron-right-circle-outline {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 100px
+}
+.mdi-chevron-right-circle-outline::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(-45deg);
+    right: 12px;
+    top: 4px;
+    color: gray;
+}
