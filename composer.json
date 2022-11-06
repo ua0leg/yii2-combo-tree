@@ -3,7 +3,7 @@
     "description": "Yii2 Combo Tree Select Extension",
     "keywords": ["yii2","extension","select","tree","dropdown","combo"],
     "type": "yii2-extension",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "license": "MIT",
     "autoload": {
         "psr-4": {
