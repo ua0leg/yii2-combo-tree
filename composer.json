@@ -1,22 +1,23 @@
 {
-    "name": "mrmuminov/yii2-combo-tree",
+    "name": "ua0leg/yii2-combo-tree",
     "description": "Yii2 Combo Tree Select Extension",
-    "type": "yii2-extension",
     "keywords": ["yii2","extension","select","tree","dropdown","combo"],
+    "type": "yii2-extension",
+    "minimum-stability": "dev",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ua0leg\\Yii2ComboTree\\": "src/"
+        }
+    },
     "authors": [
         {
-            "name": "Bahriddin Mo'minov",
-            "email": "darkshadeuz@gmail.com"
+            "name": "Oleg",
+            "email": "9407674@gmail.com"
         }
     ],
     "require": {
         "php": ">=7.0.0",
         "yiisoft/yii2": "~2.0.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "MrMuminov\\ComboTree\\": "src"
-        }
     }
 }
