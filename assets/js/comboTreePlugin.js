@@ -394,13 +394,13 @@
 
     if (this.options.isMultiple) {
       for (var i=0; i<this._selectedItems.length; i++){
-        tmpTitle += this._selectedItems[i].title;
+        tmpTitle += this._selectedItems[i].id;
         if (i<this._selectedItems.length-1)
-          tmpTitle += ", ";
+          tmpTitle += ",";
       }
     }
     else {
-      tmpTitle = this._selectedItem.title;
+      tmpTitle = this._selectedItem.id;
     }
 
     this._elemInput.val(tmpTitle);

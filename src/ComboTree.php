@@ -123,6 +123,7 @@ class ComboTree extends Widget
     public function run()
     {
         $this->registerClientScript();
+        $this->options['value'] = ''; // prevent setting array as input value
         echo $this->renderInputHtml();
     }
 
