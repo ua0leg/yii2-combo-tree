@@ -37,6 +37,7 @@
 
 .comboTreeDropDownContainer li{
     list-style-type: none;
+    position: relative;
     padding-left: 15px;
     cursor: pointer;
 }
@@ -64,11 +65,13 @@ span.comboTreeItemTitle{
     margin: 0px 4px 0px 0px;
 }
 .comboTreeParentPlus{
-    position: relative;
-    left: -12px;
+    position: absolute;
+    left: 0;
     top: 4px;
-    width: 4px;
-    float: left;
+    width: 14px;
+    height: 14px;
+    color: #6b7280;
+    line-height: 0;
 }
 
 
@@ -82,7 +85,10 @@ span.comboTreeItemTitle{
 }
 
 .comboTreeArrowBtnImg{
-    font-size: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    font-size: 0;
 }
 
 .multiplesFilter{
@@ -95,54 +101,36 @@ span.comboTreeItemTitle{
     border-bottom: 1px solid #999;
 }
 
-.mdi-chevron-down-circle-outline {
-    box-sizing: border-box;
+.mdi-chevron-down-circle-outline,
+.mdi-chevron-right-circle-outline,
+.mdi-chevron-down {
     position: relative;
     display: block;
-    transform: scale(var(--ggs,1));
-    width: 22px;
-    height: 22px;
-    border: 2px solid transparent;
-    border-radius: 100px;
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+    background: none;
 }
-.mdi-chevron-down-circle-outline::after {
+.mdi-chevron-down-circle-outline::after,
+.mdi-chevron-right-circle-outline::after,
+.mdi-chevron-down::after {
     content: "";
     display: block;
     box-sizing: border-box;
     position: absolute;
     width: 6px;
     height: 6px;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
-    transform: rotate(45deg);
-    left: 2px;
-    top: 2px;
-    color: gray;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
 }
-.mdi-chevron-right-circle-outline {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 22px;
-    height: 22px;
-    border: 2px solid transparent;
-    border-radius: 100px
+.mdi-chevron-down-circle-outline::after,
+.mdi-chevron-down::after {
+    transform: rotate(45deg);
+    left: 3px;
+    top: 2px;
 }
 .mdi-chevron-right-circle-outline::after {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
     transform: rotate(-45deg);
-    right: 12px;
-    top: 4px;
-    color: gray;
-}
-.mdi-chevron-down {
-    background: url('https://api.iconify.design/mdi/chevron-down.svg') no-repeat center center / contain;
+    left: 2px;
+    top: 3px;
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ua0leg\Yii2ComboTree;
+namespace Ua0leg\Yii2ComboTree;
 
 use yii\web\AssetBundle;
 
